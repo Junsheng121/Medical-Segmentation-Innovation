@@ -1,4 +1,4 @@
-# ljs-Reimplemented: Medical-Segmentation UNet
+# ljs-Implemented: Medical-Segmentation UNet
 
 Attention-Based UNet for 2D and 3D Dataset Segmentation. Codes for National Innovation Project: Medical image segmentation system based on mixed attention mechanism.
 
