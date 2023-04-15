@@ -1,0 +1,12 @@
+input/liver/*
+
+input/liver_nii/*
+
+output/liver/*
+
+output/liver_nii/*
+
+*.pth
+
+__pycache__
+
