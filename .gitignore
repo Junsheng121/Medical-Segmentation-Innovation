@@ -9,3 +9,5 @@ output/liver_nii/*
 __pycache__
 
 .DS_Store
+
+.ipy*
