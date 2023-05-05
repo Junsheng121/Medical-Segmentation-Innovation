@@ -19,7 +19,6 @@ from unet.vit_seg_modeling import CONFIGS as CONFIGS_ViT_seg
 from unet.att_unet import  AttUNet
 from unet.att_cbam_unet import AttCBAMUNet
 from zipfile import ZipFile
-from synapse_test import syna_test
 gradio.close_all()
 def get_args():
     parser = argparse.ArgumentParser(description='Predict masks from input images')
