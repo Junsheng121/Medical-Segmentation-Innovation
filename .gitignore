@@ -1,7 +1,5 @@
 input/liver/*
 
-input/liver_nii/*
-
 output/liver/*
 
 output/liver_nii/*
@@ -10,3 +8,4 @@ output/liver_nii/*
 
 __pycache__
 
+.DS_Store

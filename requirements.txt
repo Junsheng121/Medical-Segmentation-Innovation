@@ -5,3 +5,6 @@ torch
 torchvision
 tqdm
 wandb
+SimpleITK
+nibabel
+ml_collections

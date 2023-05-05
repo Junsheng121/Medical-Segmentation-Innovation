@@ -20,6 +20,9 @@ from unet.att_unet import  AttUNet
 from unet.att_cbam_unet import AttCBAMUNet
 from zipfile import ZipFile
 gradio.close_all()
+os.makedirs('input/liver',exist_ok=True)
+os.makedirs('output/liver',exist_ok=True)
+os.makedirs('output/liver_nii',exist_ok=True)
 def get_args():
     parser = argparse.ArgumentParser(description='Predict masks from input images')
     parser.add_argument('--load', '-m', default='MODEL.pth', metavar='FILE',
@@ -114,7 +117,7 @@ def predict2d(file, whichUNet, size):
             config_vit.patches.grid = (
             int(args.img_size / args.vit_patches_size), int(args.img_size / args.vit_patches_size))
         net = ViT_seg(config_vit, img_size=args.img_size, num_classes=config_vit.n_classes).to(device)
-    args.load = 'saved_checkpoints/'+args.model+"_"+args.UNet+"_checkpoint_epoch100.pth"
+    args.load = 'saved_checkpoints/'+args.model+"_"+args.UNet+"_checkpoint_epoch50.pth"
     net.load_state_dict(torch.load(args.load, map_location=device))
     net.to(device=device)
 
@@ -162,7 +165,7 @@ def predict3d(nii, whichUNet):
             config_vit.patches.grid = (
             int(args.img_size / args.vit_patches_size), int(args.img_size / args.vit_patches_size))
         net = ViT_seg(config_vit, img_size=args.img_size, num_classes=config_vit.n_classes)
-    args.load = 'saved_checkpoints/'+args.model+"_"+args.UNet+"_checkpoint_epoch100.pth"
+    args.load = 'saved_checkpoints/'+args.model+"_"+args.UNet+"_checkpoint_epoch50.pth"
     net.load_state_dict(torch.load(args.load, map_location=device))
     net.to(device=device)
    
