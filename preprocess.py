@@ -6,6 +6,7 @@ import numpy as np
 import nibabel as nib
 from tqdm import tqdm
 import scipy
+
 import matplotlib.pyplot as plt
 
 import utils.util as util

@@ -8,3 +8,4 @@ wandb
 SimpleITK
 nibabel
 ml_collections
+SimpleITK

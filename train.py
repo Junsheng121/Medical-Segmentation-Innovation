@@ -2,7 +2,7 @@ import argparse
 import logging
 import sys
 from pathlib import Path
-
+from tqdm import tqdm
 import numpy as np
 import torch
 import torch.nn as nn
